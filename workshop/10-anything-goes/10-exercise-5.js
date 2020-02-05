@@ -17,7 +17,7 @@ function findArm(){
         let x = numA.length;
         let sum = 0
         
-        for (let i = 0 ; i < (x + 1) ; i++) {
+        for (let i = 0 ; i < x ; i++) {
             if (numA[i] >= 0 ) {
                 sum += (Math.pow(numA[i], x));
             }
