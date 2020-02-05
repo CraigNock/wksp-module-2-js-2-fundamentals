@@ -17,7 +17,25 @@
 // http://mathworld.wolfram.com/NarcissisticNumber.html
 
 function identifyArmstrongNumbers(num1, num2) {
-
-}
+    
+        let armstrongNumbers = [];
+    
+        for (let arm = num1; arm < (num2 + 1) ; arm++) {
+            let armArray = (arm.toString()).split('');
+            let x = armArray.length;
+            
+            let sum = 0
+            for (let i = 0 ; i < (x + 1) ; i++) {
+                if (armArray[i] >= 0 ) {
+                    sum += (Math.pow(armArray[i], x));
+                }
+            }
+            
+            if (arm === sum) {
+                armstrongNumbers.push(arm);
+            }
+        };
+    console.log(armstrongNumbers);
+    }
 
 console.log(identifyArmstrongNumbers(100, 99999));
