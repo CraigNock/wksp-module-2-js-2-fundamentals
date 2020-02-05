@@ -5,7 +5,7 @@
 // Armstrong numbers.
 
 // This means that our code from the previous question will need to be tweaked a little
-// to determine Armstrong numbers of different lengths.
+// to determine Narcissistic numbers of different lengths.
 // e.g.
 // a number of 1 digit; each digit is to the power of 1
 // a number of 2 digit; each digit is to the power of 2
