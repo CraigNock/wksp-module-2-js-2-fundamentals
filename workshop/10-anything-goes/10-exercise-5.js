@@ -8,12 +8,27 @@
 // to the number itself. For example,
 // 371 is an Armstrong number since 3*3 + 7*3 + 1*3 = 371.
 
-let armstrongNumbers = [];
-function findArm(num){
-    for (let i = 0; i<1000 ; i++) {
+function findArm(){
+
+    let armstrongNumbers = [];
+
+    for (let num = 0; num<1000 ; num++) {
+        let numA = (num.toString()).split('');
+        let x = numA.length;
+        let sum = 0
         
-    }
+        for (let i = 0 ; i < (x + 1) ; i++) {
+            if (numA[i] >= 0 ) {
+                sum += (Math.pow(numA[i], x));
+            }
+        }
+        if (num === sum) {
+            armstrongNumbers.push(num);
+        }
+    };
+console.log(armstrongNumbers);
 }
 
+findArm();
 
-console.log(armstrongNumbers);
+
