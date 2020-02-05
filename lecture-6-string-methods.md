@@ -26,12 +26,30 @@ str.toString();
 
 let arr = [1, 2, 'three'];
 arr.toString();
+// "1,2,three"
 
 let dip = {value: 3};
 dip.toString();
+//[object,object] ( cant' access, don't use this)
 ```
 
 Let's look at the examples above again using `valueOf`.
+
+let dip = {value: 3};
+
+dip.valueOf()
+
+// {value: 3}
+
+let arr = [1, 2, 'three'];
+
+arr.valueOf()
+
+// [1, 2, 'three']
+
+num.valueOf()
+// 3
+
 
 ---
 
@@ -68,6 +86,8 @@ Calling `.length` returns the length of the sequence.
 const sentiment = 'I love programming';
 sentiment.length;
 
+//18
+
 ```
 
 ---
@@ -81,6 +101,13 @@ It takes 2 parameters, the value to replace and the new value.
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.replace('programming','dogs');
+// 'I love dogs'
+
+const sentiment = 'I love programming';
+sentiment.replace('g','I');
+//
+
 
 ```
 
@@ -95,6 +122,9 @@ const sentiment = 'I love programming';
 ```js
 // Example
 const sentiment = 'I love programming';
+sentiment.slice(2,6);
+// 'love'   (note it does not take 6 ' ')
+
 
 ```
 
@@ -104,11 +134,14 @@ const sentiment = 'I love programming';
 
 The `.concat()` method is used to join two or more strings.
 
+
+kind of redundant with backticks ${string literals} , and just using + on strings
 ```js
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
-
+let new = partOne.concat(partTwo)
+// 'Do or do not. There is no try.'
 ```
 
 ---
@@ -120,6 +153,9 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
+truth.split('') // outputs every character as a new string ['T',''h', etc]
+truth.split(' ')
+// ['The','greatest','teacher','failure','is']
 
 ```
 
@@ -134,6 +170,12 @@ This method returns -1 if the value to search for never occurs.
 ```js
 // Example
 let yodaSpeak = "Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.";
+yodaSpeak.indexOf('Anger')
+// 56  (caps sensitive)(also only the first instance)
+yodaSpeak.indexOf('Fear')
+// 0
+yodaSpeak.indexOf('fear')
+// -1 (doesn't exsist)(note indexes can go up to infinity so -1 :doesn't exsist)
 
 ```
 
