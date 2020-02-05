@@ -38,6 +38,15 @@ The `.join()` method returns the array as a string.
 const lexicon = ['The', 'large', 'shaggy', 'dog', 'barked', 'at', 'the', 'silence'];
 
 let sentence = lexicon.join();
+// "The,large,shaggy,dog, etc"
+
+lexicon.join(' ');
+// "The large shaggy dog etc"
+
+***default join is a comma, can assign a space etc
+.toString() you cannot have anything, but comma
+
+
 
 ```
 
@@ -62,6 +71,42 @@ Let's dip into the internet and see if we can learn all of these methods collect
 - Take given methods
     - find an explanation/definition, then write your own.
     - create two examples of each method in use. Be creative. 😛
+
+.includes()
+
+Checks if an array contains a specified element. Returns true or false.
+```js
+let array = [1, 'two', true];
+array.includes('two');
+// true
+array.includes('true')
+//false
+
+```
+
+
+slice()
+
+takes elements from an array and returns them in a new array. Does not affect original.
+
+Can specify a start and end for elements to extract. 
+
+NOTE: Does not include end argument.
+If start specified, but not end; will take to end of array.
+
+
+```js
+let array = [1, 'two', true, 'blue'];
+array.slice(1,3);
+// ['two', true]
+array.slice(2);
+//[true, 'blue']
+
+```
+
+
+
+
 
 ---
 

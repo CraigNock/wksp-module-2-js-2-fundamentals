@@ -9,8 +9,11 @@
 // 371 is an Armstrong number since 3*3 + 7*3 + 1*3 = 371.
 
 let armstrongNumbers = [];
-
-// write your loop here...
+function findArm(num){
+    for (let i = 0; i<1000 ; i++) {
+        
+    }
+}
 
 
 console.log(armstrongNumbers);
